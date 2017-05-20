@@ -13,16 +13,24 @@
 		<script>
 			googletag.cmd.push(function() {
 				googletag.defineSlot(
-                                        '/5441/wka.life/_project43//article', 
-                                        [[728, 90]], 
-                                        'gpt-top-leaderboard'
-                                ).addService(googletag.pubads());
+                    '/5441/wka.life/_project43//article', 
+                    [[728, 90]], 
+                    'gpt-top-leaderboard'
+                ).addService(googletag.pubads());
 
-				googletag.defineSlot(
-                                        '/5441/wka.life/_project43//article', 
-                                        [[300, 250]], 
-                                        'gpt-top-boxad'
-                                ).addService(googletag.pubads());
+				var atfSlot = googletag.defineSlot(
+                    '/5441/wka.life/_project43//article', 
+                    [[300, 250]], 
+                    'gpt-top-boxad'
+                ).addService(googletag.pubads());
+                atfSlot.setTargeting('position', 'atf');
+
+                var btfSlot = googletag.defineSlot(
+                    '/5441/wka.life/_project43//article',
+                    [[300, 250]],
+                    'gpt-incontent-boxad'
+                ).addService(googletag.pubads());
+                btfSlot.setTargeting('position', 'btf');
 
 				googletag.pubads().collapseEmptyDivs();
                 googletag.pubads().enableSingleRequest();
@@ -83,6 +91,9 @@
                                 </script>
 				<div class="rail-module">rail module</div>
 				<div id="gpt-incontent-boxad" class="incontent-boxad floating pinned-top"></div>
+                <script>
+                    googletag.cmd.push(function() { googletag.display('gpt-incontent-boxad'); });
+                </script>
 			</aside>
 		</div>
 	</body>
