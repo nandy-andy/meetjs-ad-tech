@@ -5,11 +5,35 @@
 		<title>meet.js - ad:tech w Fandom</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<link rel="stylesheet" href="style.css" type="text/css" />
+		<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+		<script>
+  			var googletag = googletag || {};
+  			googletag.cmd = googletag.cmd || [];
+		</script>
+		<script>
+			googletag.cmd.push(function() {
+				googletag.defineSlot(
+                                        '/5441/wka.life/_project43//article', 
+                                        [[728, 90]], 
+                                        'gpt-top-leaderboard'
+                                ).addService(googletag.pubads());
+
+				googletag.pubads()
+					.setTargeting('src', ['gpt'])
+					.setTargeting('lang', ['pl'])
+					.setTargeting('devbox', ['dev-nandy']);
+
+				googletag.enableServices();
+  			});
+		</script>
 	</head>
 	<body>
 		<div class="wrapper">
 			<header class="header">
 				<div id="gpt-top-leaderboard" class="top-leaderboard"></div>
+				<script>
+					googletag.cmd.push(function() { googletag.display('gpt-top-leaderboard'); });
+				</script>
 			</header>
 			<article class="main">
 				<p>Lorem ipsum dolor sit amet, vix esse repudiandae et, cu vis etiam falli. Illud exerci aliquip ei his. Quis iudicabit in quo, vis et minim noster deseruisse. Eius vidisse repudiare in duo, possim audiam eu has. Eum an iudico mandamus dissentiunt.</p>
