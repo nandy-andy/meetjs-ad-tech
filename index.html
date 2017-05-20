@@ -18,6 +18,12 @@
                                         'gpt-top-leaderboard'
                                 ).addService(googletag.pubads());
 
+				googletag.defineSlot(
+                                        '/5441/wka.life/_project43//article', 
+                                        [[728, 90]], 
+                                        'gpt-top-boxad'
+                                ).addService(googletag.pubads());
+
 				googletag.pubads()
 					.setTargeting('src', ['gpt'])
 					.setTargeting('lang', ['pl'])
@@ -69,6 +75,9 @@
 			</article>
 			<aside class="aside">
 				<div id="gpt-top-boxad" class="top-boxad"></div>
+				<script>
+                                        googletag.cmd.push(function() { googletag.display('gpt-top-boxad'); });
+                                </script>
 				<div class="rail-module">rail module</div>
 				<div id="gpt-incontent-boxad" class="incontent-boxad floating pinned-top"></div>
 			</aside>
