@@ -32,6 +32,12 @@
                 ).addService(googletag.pubads());
                 btfSlot.setTargeting('position', 'btf');
 
+                googletag.defineSlot(
+                    '/5441/wka.life/_project43//article',
+                    [[1, 1]],
+                    'gpt-invisible-slot'
+                ).addService(googletag.pubads());
+
 				googletag.pubads().collapseEmptyDivs();
                 googletag.pubads().enableSingleRequest();
 
@@ -96,5 +102,19 @@
                 </script>
 			</aside>
 		</div>
+        <div id="gpt-invisible-slot"></div>
+        <script>
+            googletag.cmd.push(function() { googletag.display('gpt-invisible-slot'); });
+        </script>
 	</body>
+    <script>
+        window.addEventListener("message", function (event) {
+            try {
+                var massage = JSON.parse(event.data);
+                if(massage.message === "changeBgColor" && massage.color) {
+                    document.body.style.backgroundColor = massage.color;
+                }
+            } catch(e) {}
+        }, false);
+    </script>
 </html>
